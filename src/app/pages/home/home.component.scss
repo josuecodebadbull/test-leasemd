@@ -1,0 +1,28 @@
+.home-panel {
+  padding-top: 75px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgba(134, 67, 217, 1) 10%, rgba(80, 88, 252, 0.7) 17%, rgba(255, 255, 255, 1) 53%, rgba(255, 255, 255, 1) 100%);
+
+  h2 {
+    padding-top: 80px;
+    line-height: 1.1;
+    font-size: 70px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  .img-cars {
+    position: absolute;
+    z-index: 0;
+    left: 45%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    min-width: 64%;
+  }
+
+  div[class^='col'] {
+    z-index: 10;
+  }
+}
