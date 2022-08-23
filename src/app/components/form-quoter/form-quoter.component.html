@@ -1,1 +1,71 @@
-<p>form-quoter works!</p>
+<ng-container [formGroup]="quoterForm">
+  <div class="container card">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text-center pt-3 pb-5 arial-regular">Solicita tu cotización.</h3>
+      </div>
+      <div class="col-12 px-5 pt-3">
+        <mat-form-field class="w-100">
+          <mat-label>Distribuidor</mat-label>
+          <mat-select formControlName="idDistribuidor">
+            <mat-option *ngFor="let dist of distribuidores" [value]="dist.id">
+              {{dist.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="quoterForm.get('idDistribuidor')?.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-12 px-5 pt-3">
+        <mat-form-field class="w-100">
+          <mat-label>Página del auto</mat-label>
+          <input type="text" matInput formControlName="paginaAuto">
+          <mat-error *ngIf="quoterForm.get('paginaAuto')?.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error
+            *ngIf="quoterForm.get('paginaAuto')?.hasError('maxlength') && !quoterForm.get('paginaAuto')?.hasError('required')">
+            Longitud máxima de <strong>64 carácteres</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-12 px-5 pt-3">
+        <mat-form-field class="w-100">
+          <mat-label>Tu nombre completo</mat-label>
+          <input type="text" matInput formControlName="nombreCompleto">
+          <mat-error *ngIf="quoterForm.get('nombreCompleto')?.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error
+            *ngIf="quoterForm.get('nombreCompleto')?.hasError('maxlength') && !quoterForm.get('nombreCompleto')?.hasError('required')">
+            Longitud máxima de <strong>64 carácteres</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-12 px-5 pt-3">
+        <mat-form-field class="w-100">
+          <mat-label>Email</mat-label>
+          <input type="text" matInput formControlName="email">
+          <mat-error
+            *ngIf="quoterForm.get('email')?.hasError('email')&& !quoterForm.get('email')?.hasError('required')">
+            Correo no valido
+          </mat-error>
+          <mat-error *ngIf="quoterForm.get('email')?.hasError('required')">
+            Campo <strong>requerido</strong>
+          </mat-error>
+          <mat-error
+            *ngIf="quoterForm.get('email')?.hasError('maxlength') && !quoterForm.get('email')?.hasError('required')">
+            Longitud máxima de <strong>64 carácteres</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-12 px-5 py-5">
+        <p>Uno de nuestros ejecutivos preparará tu cotización y te la hará llegar a tu correo electrónico</p>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <button (click)="nuevaCotizacion()" class="btn btn-primary btn-btn-lease">SOLICITAR COTIZACIÓN</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
