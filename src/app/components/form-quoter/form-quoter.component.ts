@@ -11,7 +11,7 @@ import { FormularioService } from 'src/app/services/formulario.service';
 export class FormQuoterComponent implements OnInit {
 
   quoterForm: FormGroup;
-  formSended: boolean = true;
+  formSended: boolean = false;
   loading: boolean = false;
   distribuidores: Distribuidores[] = [];
 
