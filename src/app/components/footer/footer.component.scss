@@ -1,0 +1,62 @@
+@import '../../../assets/scss/base/colors';
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.bg-secondary {
+  opacity: 0.4 !important;
+}
+
+.ul--footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-bottom: 25px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $charleston-green;
+      }
+    }
+
+    &:first-child {
+      font-size: 20px;
+    }
+  }
+}
+
+.ul--social{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        float: left;
+        padding-right: 25px;
+    }
+}
+
+
+.newsletter {
+  border: 1px solid $black;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.btn--newsletter {
+  border: 1px solid $black;
+  background-color: $black;
+  
+}
+
+.mar-0{
+    display: block;
+    margin: 0 auto;
+
+}

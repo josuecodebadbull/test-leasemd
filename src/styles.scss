@@ -3,6 +3,27 @@
 
 
 // BOTONES
-.btn-lease{
-    color: $bleudefrance !important;
+.btn-btn-lease{
+    background-color: $bleudefrance !important;
+    font-size: 15px !important;
+    padding: 15px 20px !important;
 }
+
+.text--cg{
+    color: $charleston-green;
+}
+
+.cards{
+    background-color: white;   
+    margin: 30px 0;
+}
+
+.op-6{
+    opacity: .6;
+}
+
+.bg--cultured{
+    background-color: $cultured;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
