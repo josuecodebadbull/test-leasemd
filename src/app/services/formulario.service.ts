@@ -21,7 +21,7 @@ export class FormularioService {
   }
 
   nuevaCotizacion(req: any) {
-    this.http.post(
+    return this.http.post(
       `${this.endPoint}cotizacion`,
       req
     );

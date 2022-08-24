@@ -11,7 +11,8 @@ import { FormularioService } from 'src/app/services/formulario.service';
 export class FormQuoterComponent implements OnInit {
 
   quoterForm: FormGroup;
-
+  formSended: boolean = true;
+  loading: boolean = false;
   distribuidores: Distribuidores[] = [];
 
 
@@ -27,7 +28,7 @@ export class FormQuoterComponent implements OnInit {
       'nombreCompleto': [null, [Validators.required, Validators.maxLength(64)]],
       'email': [null, [Validators.required, Validators.email, Validators.maxLength(64)]]
     });
-    // this.obtenerDistribuidores();
+    this.obtenerDistribuidores();
   }
 
   obtenerDistribuidores() {
@@ -38,8 +39,30 @@ export class FormQuoterComponent implements OnInit {
   }
 
   nuevaCotizacion() {
+
     this.quoterForm.markAllAsTouched();
     if (!this.quoterForm.valid) return;
+
+    this.loading = true;
+
+    this.srv.nuevaCotizacion(this.quoterForm.value).subscribe(
+      next => {
+        this.formSended = true;
+        this.loading = false;
+      },
+      err => {
+        console.log(err);
+        this.formSended = true;
+        this.loading = false;
+      }
+    )
+
+  }
+
+
+  resetForm() {
+    this.quoterForm.reset();
+    this.formSended = false;
   }
 
 }

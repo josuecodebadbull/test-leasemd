@@ -24,7 +24,7 @@
     </div>
   </div>
 </div>
-<div class="container-fluid bg--cultured sec--info-2">
+<div class="container-fluid bg--cultured sec--info-2 pb-5">
   <div class="row d-flex justify-content-center">
     <div class="col-12 col-lg-6 py-5 px-lg-5">
       <h2 class="monse-bold text--cg py-2 py-lg-5">
@@ -32,10 +32,11 @@
       </h2>
     </div>
     <div class="col-12 col-lg-6 px-lg-5 pt-lg-5">
-      <div *ngFor="let item of cards" class="d-flex flex-column bg-white py-4 py-lg-5 my-3 ps-3 ps-lg-5">
+      <div *ngFor="let item of [0,1,2,3]" class="d-flex flex-column bg-white py-4 py-lg-5 my-3 ps-3 ps-lg-5">
         <h4 class="monse-bold text--cg">Smart Gas</h4>
         <p class="text--cg">Tarjeta siempre cargada para pagar y deducir tu gasto de combustible.</p>
       </div>
     </div>
   </div>
 </div>
+<app-footer class="mt-5"></app-footer>

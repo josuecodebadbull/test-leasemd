@@ -1,9 +1,16 @@
 <ng-container [formGroup]="quoterForm">
-  <div class="container card">
+  <div class="container card min-h-75">
     <div class="row">
       <div class="col-12">
         <h3 class="text-center pt-3 pb-5 arial-regular">Solicita tu cotización.</h3>
       </div>
+    </div>
+    <div *ngIf="loading" class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <mat-spinner></mat-spinner>
+      </div>
+    </div>
+    <div *ngIf="!formSended && !loading" class="row">
       <div class="col-12 px-5 pt-3">
         <mat-form-field class="w-100">
           <mat-label>Distribuidor</mat-label>
@@ -65,6 +72,16 @@
       </div>
       <div class="col-12 d-flex justify-content-center">
         <button (click)="nuevaCotizacion()" class="btn btn-primary btn-btn-lease">SOLICITAR COTIZACIÓN</button>
+      </div>
+    </div>
+    <div *ngIf="formSended && !loading" class="row">
+      <div class="d-flex flex-column col-12 justify-content-center align-items-center">
+        <p class="text-center">
+          ¡Tú cotización está en camino!
+        </p>
+        <button (click)="resetForm()" class="btn btn-primary btn-btn-lease mar-0 w-50 my-5">
+          REGRESAR
+        </button>
       </div>
     </div>
   </div>

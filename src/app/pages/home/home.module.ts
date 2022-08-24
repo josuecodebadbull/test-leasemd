@@ -6,8 +6,7 @@ import { NavMenuComponent } from 'src/app/components/nav-menu/nav-menu.component
 import { FormQuoterComponent } from 'src/app/components/form-quoter/form-quoter.component';
 import { MaterialModule } from 'src/app/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MatSelectModule } from '@angular/material/select';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -16,6 +15,7 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     HomeComponent,
     NavMenuComponent,
     FormQuoterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +23,6 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSelectModule
   ]
 })
 export class HomeModule { }
