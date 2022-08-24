@@ -1,16 +1,20 @@
+@import '../../../assets/scss/base/colors';
+
 .home-panel {
   padding-top: 75px;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgba(134, 67, 217, 1) 10%, rgba(80, 88, 252, 0.7) 17%, rgba(255, 255, 255, 1) 53%, rgba(255, 255, 255, 1) 100%);
 
   h2 {
-    padding-top: 80px;
+    padding-top: 20px;
     line-height: 1.1;
-    font-size: 70px;
+    font-size: 40px;
+    color: $charleston-green;
   }
 
   p {
-    font-size: 25px;
+    font-size: 18px;
+    color: $charleston-green;
   }
 
   .img-cars {
@@ -26,3 +30,74 @@
     z-index: 10;
   }
 }
+
+.bg-dark {
+  background-color: $black !important;
+}
+
+.sec--info , .sec--info-2 {
+  h2 {
+    padding-top: 20px;
+    line-height: 1.1;
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .home-panel {
+    padding-top: 75px;
+
+    h2 {
+      font-size: 80px;
+      padding-top: 80px;
+    }
+
+    p {
+      font-size: 25px;
+    }
+  }
+
+  .sec--info, .sec--info-2{
+    h2 {
+      font-size: 50px;
+
+      &.pad--title {
+        padding: 100px 0 20px 0 !important;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      &.pad--text {
+        padding-bottom: 100px !important;
+      }
+    }
+  }
+
+  .sec--info-2{
+    h2 {
+      font-size: 50px;      
+    }
+
+    p {
+      font-size: 22px;      
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

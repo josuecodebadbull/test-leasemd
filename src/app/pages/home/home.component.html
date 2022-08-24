@@ -1,15 +1,42 @@
 <app-nav-menu></app-nav-menu>
-<div class="home-panel min-vh-100 container-full">
-  <img src="../../../assets/img/cars.png" alt="" class="img-cars img-fluid">
+<div class="home-panel min-vh-100 container-fluid">
+  <img src="../../../assets/img/cars.png" alt="" class="img-cars img-fluid d-none d-lg-block">
   <div class="row">
-    <div class="col-12 col-md-7 ps-5">
+    <div class="col-12 col-lg-7 px-3 ps-lg-5">
       <h2 class="monse-bold">Conduce el auto de tus sueños.</h2>
-      <p class="pt-2">Tenemos para ti un plan de arrendamiento de auto seminuevo a precio preferencial y con el máximo
+      <p class="pt-2 text--cg op-6">Tenemos para ti un plan de arrendamiento de auto seminuevo a precio preferencial y con el máximo
         beneficio
         fiscal que la ley permite.</p>
+      <img src="../../../assets/img/cars.png" alt="" class="img-fluid d-lg-none">
     </div>
-    <div class="col-12 col-md-5">
-      formulario
+    <div class="col-12 col-lg-5 pt-4 px-3 px-lg-5">
+      <app-form-quoter></app-form-quoter>
     </div>
   </div>
 </div>
+<div class="container-fluid sec--info">
+  <div class="row">
+    <div class="col-12 bg-dark py-5 px-3 px-lg-5 si--1">
+      <h2 class="monse-bold text-white pad--title">Estrenar un auto nunca ha sido tan fácil.</h2>
+      <p class="text-white py-2 pad--text">El arrendamiento de un seminuevo puede ser aún más valioso si puedes obtener
+        el mejor acuerdo con el distribuidor. LeaseMD lleva a cabo esta negociación por ti, garantizándote el mejor
+        acuerdo posible.</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg--cultured sec--info-2 pb-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-lg-6 py-5 px-lg-5">
+      <h2 class="monse-bold text--cg py-2 py-lg-5">
+        Ofrecemos más que el arrendamiento de un seminuevo.
+      </h2>
+    </div>
+    <div class="col-12 col-lg-6 px-lg-5 pt-lg-5">
+      <div *ngFor="let item of [0,1,2,3]" class="d-flex flex-column bg-white py-4 py-lg-5 my-3 ps-3 ps-lg-5">
+        <h4 class="monse-bold text--cg">Smart Gas</h4>
+        <p class="text--cg">Tarjeta siempre cargada para pagar y deducir tu gasto de combustible.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer class="mt-5"></app-footer>
